@@ -7,7 +7,7 @@ const featureCards = [
   ['/feature-global-sourcing.png','Global Sourcing Expertise','Domestic and international supplier relationships designed to improve availability, cost control, and fulfillment.'],
   ['/feature-cost-savings.png','Cost Savings for Resale','Strategic sourcing and discounted purchasing opportunities to support stronger margins and growth.'],
   ['/feature-quality-assurance.png','Quality Assurance','Supplier vetting and product review to reduce risk, improve reliability, and protect customer satisfaction.'],
-  ['/feature-seamless-logistics.png','Seamless Logistics','End-to-end transportation, warehousing, customs coordination, and last-mile delivery for domestic and international shipments.'],
+  ['/feature-seamless-logistics.png','Seamless Logistics','End-to-end transportation, warehousing, customs coordination, and last-mile delivery for domestic and international shipments.'],];
 
 const productCategories = ['Networking Equipment','Routers & Switches','Wireless Accessories','Data Storage','SSD Drives','External Storage','Keyboards & Mice','Docking Stations','Computer Accessories','Mobile Technology','Charging Systems','Connectivity Products'];
 const markets = ['Small & Medium Businesses','Technology Resellers','Managed Service Providers','Educational Institutions','Healthcare Organizations','Nonprofits','Municipal Agencies','Government Contractors','Corporate Procurement Teams','Retail Buyers','Commercial Buyers','Wholesale Purchasing Teams'];
