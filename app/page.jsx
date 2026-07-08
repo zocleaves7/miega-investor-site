@@ -6,7 +6,6 @@ import {
   Factory,
   Globe2,
   Handshake,
-  Instagram,
   LineChart,
   Mail,
   MapPin,
