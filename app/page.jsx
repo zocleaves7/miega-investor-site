@@ -330,7 +330,7 @@ export default function Page() {
             <Mail size={18} /> Request a Quote
           </a>
           <a className="button ghost" href="https://www.instagram.com/miegaglobalsolutions" target="_blank">
-            <Instagram size={18} /> Instagram
+           Instagram
           </a>
         </div>
       </section>
