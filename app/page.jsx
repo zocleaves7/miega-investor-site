@@ -1,5 +1,5 @@
 import './globals.css';
-import { ArrowRight, BarChart3, Building2, Factory, Globe2, Handshake, LineChart, Mail, MapPin, PackageCheck, Phone, ShieldCheck, Ship, Truck, Warehouse } from 'lucide-react';
+import { ArrowRight, BarChart3, Factory, Globe2, Handshake, LineChart, Mail, MapPin, PackageCheck, Phone, ShieldCheck, Ship, Truck, Warehouse } from 'lucide-react';
 
 const featureCards = [
   ['/feature-global-sourcing.png','Global Sourcing','Trusted manufacturer and supplier relationships designed to improve availability, pricing, and fulfillment.'],
@@ -25,8 +25,8 @@ export default function Page() {
 
       <header className="nav">
         <a className="brand" href="#home"><img src="/miega-logo.png" alt="MIEGA Global Solutions logo" /><div><b>MIEGA</b><span>Global Solutions LLC</span></div></a>
-        <nav><a href="#story">About</a><a href="#solutions">Solutions</a><a href="#industries">Industries</a><a href="#investors">Investors</a><a href="#locations">Locations</a><a href="#contact">Contact</a></nav>
-        <a className="button" href="#contact">Request a Quote</a>
+        <nav><a href="#story">About</a><a href="#solutions">Solutions</a><a href="#global-network">Global Network</a><a href="#industries">Industries</a><a href="#investors">Investors</a><a href="#quote">Quote</a><a href="#suppliers">Suppliers</a><a href="#contact">Contact</a></nav>
+        <a className="button" href="#quote">Request a Quote</a>
       </header>
 
       <section id="home" className="hero">
@@ -34,9 +34,14 @@ export default function Page() {
           <p className="eyebrow">MIEGA Digital Headquarters</p>
           <h1>Global Procurement. Strategic Distribution. Scalable Growth.</h1>
           <p className="lead">MIEGA Global Solutions connects businesses, institutions, government buyers, resellers, and procurement teams with trusted sourcing, technology procurement, and scalable distribution solutions.</p>
-          <div className="heroActions"><a className="button" href="#contact">Request a Quote <ArrowRight size={18} /></a><a className="button ghost" href="#investors">Investor Relations</a><a className="button ghost" href="#suppliers">Supplier Development</a></div>
+          <div className="heroActions"><a className="button" href="#quote">Request a Quote <ArrowRight size={18} /></a><a className="button ghost" href="#investors">Investor Relations</a><a className="button ghost" href="#suppliers">Supplier Development</a></div>
         </div>
-        <div className="heroCard heroImageCard"><img src="/feature-global-sourcing.png" alt="Global sourcing network" /></div>
+        <div className="globeStage" aria-label="Animated MIEGA global sourcing globe">
+          <div className="orbit orbitOne"></div><div className="orbit orbitTwo"></div><div className="orbit orbitThree"></div>
+          <div className="globe"><div className="globeGrid"></div><img src="/miega-logo.png" alt="MIEGA logo" /></div>
+          <span className="signal signalOne"></span><span className="signal signalTwo"></span><span className="signal signalThree"></span>
+          <p>Worldwide Sourcing • Strategic Distribution</p>
+        </div>
       </section>
 
       <section className="stats"><div><Globe2 /><strong>Global Reach</strong><span>Worldwide sourcing vision</span></div><div><PackageCheck /><strong>Strategic Procurement</strong><span>Business-focused buying</span></div><div><Truck /><strong>Reliable Distribution</strong><span>Logistics-ready growth</span></div><div><LineChart /><strong>Built for Growth</strong><span>Investor-ready strategy</span></div></section>
@@ -45,15 +50,42 @@ export default function Page() {
 
       <section id="solutions" className="section solutions"><p className="eyebrow center">Solutions Showcase</p><h2 className="centerTitle">Procurement Solutions That Move Businesses Forward</h2><p className="centerSub">Five core capabilities designed to support business buyers, procurement teams, resellers, and growing organizations.</p><div className="carousel">{featureCards.map(([image,title,text]) => <article className="featureCard" key={title}><img src={image} alt={title} /><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></section>
 
+
+      <section id="global-network" className="section networkSection">
+        <p className="eyebrow center">Interactive Global Sourcing Map</p>
+        <h2 className="centerTitle">Explore MIEGA’s Global Procurement Network</h2>
+        <p className="centerSub">Tap a region to view its sourcing focus and logistics role within MIEGA’s long-term procurement strategy.</p>
+        <div className="networkLayout">
+          <div className="mapVisual"><div className="mapGlow"></div><div className="miniGlobe">
+            <span className="continent northAmerica">NA</span><span className="continent latinAmerica">LATAM</span><span className="continent europe">EU</span><span className="continent asia">APAC</span>
+            <span className="route routeA"></span><span className="route routeB"></span><span className="route routeC"></span>
+          </div><div className="mapCaption">Tap a region card to explore sourcing capabilities.</div></div>
+          <div className="regionList">
+            <details className="regionCard"><summary><span>North America</span><small>United States, Canada, and Mexico</small></summary><p>Technology distribution, fulfillment, commercial sourcing, and nearshore procurement opportunities.</p></details>
+            <details className="regionCard"><summary><span>Latin America</span><small>Central America, Caribbean, and South America</small></summary><p>Emerging supplier relationships, regional distribution, and commercial product sourcing.</p></details>
+            <details className="regionCard"><summary><span>Europe</span><small>European Union and United Kingdom</small></summary><p>Specialized technology, industrial products, established manufacturers, and transatlantic supplier development.</p></details>
+            <details className="regionCard"><summary><span>Asia-Pacific</span><small>China, Taiwan, Japan, South Korea, Vietnam, and India</small></summary><p>Electronics, accessories, components, manufacturing, and large-scale sourcing opportunities.</p></details>
+            <details className="regionCard"><summary><span>Global Logistics</span><small>Air, ocean, ground, and last-mile coordination</small></summary><p>Flexible routing designed around order size, delivery timeline, destination, and customer requirements.</p></details>
+          </div>
+        </div>
+      </section>
       <section className="section dark"><p className="eyebrow center">Why Choose MIEGA</p><h2 className="centerTitle">Built to Serve Commercial, Institutional, and Government Buyers</h2><div className="grid">{[[PackageCheck,'Technology Procurement','Product sourcing for technology, hardware, accessories, and business equipment.'],[Ship,'Global Sourcing','Supplier development across domestic and international manufacturing markets.'],[Warehouse,'Strategic Distribution','Fulfillment and logistics support for wholesale and commercial accounts.'],[ShieldCheck,'Quality Assurance','Supplier vetting and review processes designed to reduce procurement risk.'],[Handshake,'Supplier Relationships','Long-term supplier and customer relationships built around transparency and execution.'],[Factory,'American Business Commitment','A mission aligned with strengthening American businesses and resilient supply chains.']].map(([Icon,title,text]) => <div className="miniCard" key={title}><Icon /><h3>{title}</h3><p>{text}</p></div>)}</div></section>
 
       <section id="industries" className="section twoColumns"><div className="panel"><h2>Primary Product Categories</h2><div className="tags">{productCategories.map(item => <span key={item}>{item}</span>)}</div></div><div className="panel"><h2>Markets We Serve</h2><div className="tags">{markets.map(item => <span key={item}>{item}</span>)}</div></div></section>
 
       <section id="investors" className="section investorSection"><p className="eyebrow center">Investor Relations</p><h2 className="centerTitle">Investment Highlights</h2><p className="centerSub">MIEGA is positioning itself as a scalable technology procurement and global supply chain company with multiple revenue channels.</p><div className="investGrid">{[['Scalable Business Model','Asset-light procurement and supplier-network strategy designed to expand without heavy early infrastructure.'],['Multiple Revenue Channels','Wholesale distribution, technology procurement, supplier sourcing, B2B sales, government procurement, and future private-label opportunities.'],['Large Addressable Markets','Commercial buyers, educational institutions, healthcare organizations, nonprofits, government agencies, and e-commerce customers.'],['Strategic Tennessee Launch','Starting from Tennessee with access to workforce development programs, business incentives, and scalable logistics pathways.']].map(([title,text]) => <div className="investCard" key={title}><BarChart3 /><h3>{title}</h3><p>{text}</p></div>)}</div><div className="capitalBox"><div><p className="eyebrow">Capital Raise Strategy</p><h2>Seeking First-Round Growth Capital</h2><p>Investor capital will support inventory, technology systems, personnel, operations, sales, marketing, and supplier development.</p></div><div className="funds">{funds.map(([pct,label]) => <div key={label}><strong>{pct}</strong><span>{label}</span></div>)}</div></div></section>
 
-      <section id="roadmap" className="section roadmap"><p className="eyebrow center">Growth Roadmap</p><h2 className="centerTitle">Three-Year Expansion Strategy</h2><div className="timeline">{roadmap.map(([year,title,text]) => <div className="timeCard" key={year}><span>{year}</span><h3>{title}</h3><p>{text}</p></div>)}</div></section>
+      <section id="quote" className="section formsSection">
+        <p className="eyebrow center">Business Intake</p>
+        <h2 className="centerTitle">Request a Quote or Supplier Conversation</h2>
+        <p className="centerSub">Fast inquiry links that open a pre-filled email template for buyers and supplier partners.</p>
+        <div className="formGrid">
+          <div className="formCard"><h3>Request a Quote</h3><p>For business buyers, resellers, institutions, and procurement teams seeking technology products, accessories, or sourcing support.</p><ul><li>Product category and quantity</li><li>Target price or budget</li><li>Delivery location and timeline</li><li>Special requirements</li></ul><a className="button" href="mailto:info@miegaglobalsolutions.com?subject=MIEGA%20Quote%20Request&body=Company%20Name%3A%0AContact%20Name%3A%0APhone%3A%0AProduct%20Category%3A%0AQuantity%3A%0ATarget%20Price%2FBudget%3A%0ADelivery%20Location%3A%0ATimeline%3A%0AAdditional%20Details%3A">Start Quote Request</a></div>
+          <div className="formCard"><h3>Become a Supplier</h3><p>For manufacturers, distributors, wholesalers, and sourcing partners interested in building a relationship with MIEGA.</p><ul><li>Company profile</li><li>Product categories</li><li>Minimum order quantities</li><li>Distribution capabilities</li></ul><a className="button" href="mailto:info@miegaglobalsolutions.com?subject=MIEGA%20Supplier%20Inquiry&body=Company%20Name%3A%0AContact%20Name%3A%0APhone%3A%0AWebsite%3A%0AProduct%20Categories%3A%0AMOQ%3A%0ALocations%20Served%3A%0AAdditional%20Details%3A">Start Supplier Inquiry</a></div>
+        </div>
+      </section>
 
-      <section className="section workforce"><div><p className="eyebrow">Workforce Development</p><h2>Built to Scale From Tennessee</h2><p>MIEGA plans to use a phased workforce strategy, including Tennessee-based hiring, workforce development partnerships, training programs, and selective use of wage reimbursement opportunities where eligible.</p></div><div className="workStats"><div><strong>Year 1</strong><span>6 employees</span></div><div><strong>Year 2</strong><span>16 employees</span></div><div><strong>Year 3</strong><span>35 employees</span></div></div></section>
+      <section id="roadmap" className="section roadmap"><p className="eyebrow center">Growth Roadmap</p><h2 className="centerTitle">Three-Year Expansion Strategy</h2><div className="timeline">{roadmap.map(([year,title,text]) => <div className="timeCard" key={year}><span>{year}</span><h3>{title}</h3><p>{text}</p></div>)}</div></section>
 
       <section id="suppliers" className="section supplier"><p className="eyebrow center">Supplier Development</p><h2 className="centerTitle">Distribution & Supplier Strategy</h2><p className="centerSub">MIEGA is pursuing relationships with leading technology distributors and manufacturers. Formal authorizations will be displayed as secured.</p><div className="supplierGrid">{['Ingram Micro','TD SYNNEX','Arrow','Dell','HP','Lenovo','Cisco','Microsoft'].map(item => <span key={item}>{item}</span>)}</div></section>
 
