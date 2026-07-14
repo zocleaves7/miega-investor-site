@@ -24,7 +24,7 @@ export default function Page() {
       <div className="topbar"><span>Technology Procurement • Distribution • Supply Chain Solutions</span><strong>Global Procurement. Strategic Distribution. Scalable Growth.</strong></div>
 
       <header className="nav">
-        <a className="brand" href="#home"><img src="/miega-logo.png" alt="MIEGA Global Solutions logo" /><div><b>MIEGA</b><span>Global Solutions LLC</span></div></a>
+        <a className="brand" href="#home"><img src="/miega-logo-transparent.png" alt="MIEGA Global Solutions logo" /><div><b>MIEGA</b><span>Global Solutions LLC</span></div></a>
         <nav><a href="#story">About</a><a href="#solutions">Solutions</a><a href="#global-network">Global Network</a><a href="#industries">Industries</a><a href="#investors">Investors</a><a href="#quote">Quote</a><a href="#suppliers">Suppliers</a><a href="#contact">Contact</a></nav>
         <a className="button" href="#quote">Request a Quote</a>
       </header>
@@ -38,7 +38,7 @@ export default function Page() {
         </div>
         <div className="globeStage" aria-label="Animated MIEGA global sourcing globe">
           <div className="orbit orbitOne"></div><div className="orbit orbitTwo"></div><div className="orbit orbitThree"></div>
-          <div className="globe"><div className="globeGrid"></div><img src="/miega-logo.png" alt="MIEGA logo" /></div>
+          <div className="globe"><div className="globeGrid"></div><img src="/miega-logo-transparent.png" alt="MIEGA logo" /></div>
           <span className="signal signalOne"></span><span className="signal signalTwo"></span><span className="signal signalThree"></span>
           <p>Worldwide Sourcing • Strategic Distribution</p>
         </div>
@@ -87,7 +87,41 @@ export default function Page() {
 
       <section id="industries" className="section twoColumns"><div className="panel"><h2>Primary Product Categories</h2><div className="tags">{productCategories.map(item => <span key={item}>{item}</span>)}</div></div><div className="panel"><h2>Markets We Serve</h2><div className="tags">{markets.map(item => <span key={item}>{item}</span>)}</div></div></section>
 
-      <section id="investors" className="section investorSection"><p className="eyebrow center">Investor Relations</p><h2 className="centerTitle">Investment Highlights</h2><p className="centerSub">MIEGA is positioning itself as a scalable technology procurement and global supply chain company with multiple revenue channels.</p><div className="investGrid">{[['Scalable Business Model','Asset-light procurement and supplier-network strategy designed to expand without heavy early infrastructure.'],['Multiple Revenue Channels','Wholesale distribution, technology procurement, supplier sourcing, B2B sales, government procurement, and future private-label opportunities.'],['Large Addressable Markets','Commercial buyers, educational institutions, healthcare organizations, nonprofits, government agencies, and e-commerce customers.'],['Strategic Tennessee Launch','Starting from Tennessee with access to workforce development programs, business incentives, and scalable logistics pathways.']].map(([title,text]) => <div className="investCard" key={title}><BarChart3 /><h3>{title}</h3><p>{text}</p></div>)}</div><div className="capitalBox"><div><p className="eyebrow">Capital Raise Strategy</p><h2>Seeking First-Round Growth Capital</h2><p>Investor capital will support inventory, technology systems, personnel, operations, sales, marketing, and supplier development.</p></div><div className="funds">{funds.map(([pct,label]) => <div key={label}><strong>{pct}</strong><span>{label}</span></div>)}</div></div></section>
+
+      <section id="government" className="section governmentSection">
+        <div className="governmentIntro">
+          <p className="eyebrow">Public-Sector Procurement</p>
+          <h2>Government Contracting Readiness</h2>
+          <p>
+            MIEGA Global Solutions LLC is registered in the System for Award Management and is positioned
+            to pursue federal procurement opportunities while supporting state, local, institutional, and
+            commercial buyers with technology procurement, strategic sourcing, and distribution solutions.
+          </p>
+          <div className="governmentStatus">
+            <span><b>SAM.gov</b> Registered</span>
+            <span><b>UEI</b> DAA6UFH72JG1</span>
+            <span><b>CAGE Code</b> Pending Assignment</span>
+          </div>
+        </div>
+        <div className="governmentGrid">
+          {[
+            ['Technology Procurement','Computers, accessories, networking, storage, and business technology sourcing.'],
+            ['Commercial & Industrial Supply','Procurement support for operational, institutional, and commercial requirements.'],
+            ['Strategic Distribution','Coordinated fulfillment, transportation, and delivery support.'],
+            ['Import & Export','International sourcing and supply-chain coordination based on customer requirements.'],
+            ['Rapid Fulfillment','Responsive sourcing support for time-sensitive procurement needs.'],
+            ['Supplier Development','Responsible supplier identification, vetting, and relationship development.']
+          ].map(([title,text]) => (
+            <div className="governmentCard" key={title}>
+              <ShieldCheck />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="investors" className="section investorSection"><p className="eyebrow center">Investor Relations</p><h2 className="centerTitle">Investment Highlights</h2><p className="centerSub">MIEGA is positioning itself as a scalable technology procurement and global supply chain company with multiple revenue channels.</p><div className="investGrid">{[['Scalable Business Model','Asset-light procurement and supplier-network strategy designed to expand without heavy early infrastructure.'],['Multiple Revenue Channels','Wholesale distribution, technology procurement, supplier sourcing, B2B sales, government procurement, and future private-label opportunities.'],['Large Addressable Markets','Commercial buyers, educational institutions, healthcare organizations, nonprofits, government agencies, and e-commerce customers.'],['Strategic Tennessee Launch','Starting from Tennessee with access to workforce development programs, business incentives, and scalable logistics pathways.']].map(([title,text]) => <div className="investCard" key={title}><BarChart3 /><h3>{title}</h3><p>{text}</p></div>)}</div><div className="capitalBox"><div><p className="eyebrow">Growth Capital Strategy</p><h2>Deploying Growth Capital for Scalable Expansion</h2><p>MIEGA is pursuing a disciplined mix of commercial lending, SBA programs, strategic investment, operating revenue, and future government-contract revenue to support scalable growth.</p></div><div className="capitalAllocation"><h3>Capital Allocation</h3><div className="funds">{funds.map(([pct,label]) => <div key={label}><strong>{pct}</strong><span>{label}</span></div>)}</div></div></section>
 
       <section id="quote" className="section formsSection">
         <p className="eyebrow center">Business Intake</p>
@@ -99,6 +133,30 @@ export default function Page() {
         </div>
       </section>
 
+
+      <section className="section milestonesSection">
+        <p className="eyebrow center">Company Progress</p>
+        <h2 className="centerTitle">MIEGA Milestones</h2>
+        <p className="centerSub">A factual snapshot of the infrastructure and contracting readiness MIEGA is building.</p>
+        <div className="milestoneGrid">
+          {[
+            ['Complete','Tennessee LLC Established'],
+            ['Complete','Nashville Headquarters Established'],
+            ['Complete','Los Angeles Office Opened'],
+            ['Complete','Business Website Launched'],
+            ['Complete','SAM.gov Registration Active'],
+            ['Complete','UEI Assigned'],
+            ['Pending','CAGE Code Assignment'],
+            ['In Progress','Distributor & Supplier Applications']
+          ].map(([status,title]) => (
+            <div className={`milestoneCard ${status === 'Complete' ? 'done' : 'pending'}`} key={title}>
+              <span>{status}</span>
+              <h3>{title}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="roadmap" className="section roadmap"><p className="eyebrow center">Growth Roadmap</p><h2 className="centerTitle">Three-Year Expansion Strategy</h2><div className="timeline">{roadmap.map(([year,title,text]) => <div className="timeCard" key={year}><span>{year}</span><h3>{title}</h3><p>{text}</p></div>)}</div></section>
 
       <section id="suppliers" className="section supplier"><p className="eyebrow center">Supplier Development</p><h2 className="centerTitle">Distribution & Supplier Strategy</h2><p className="centerSub">MIEGA is pursuing relationships with leading technology distributors and manufacturers. Formal authorizations will be displayed as secured.</p><div className="supplierGrid">{['Ingram Micro','TD SYNNEX','Arrow','Dell','HP','Lenovo','Cisco','Microsoft'].map(item => <span key={item}>{item}</span>)}</div></section>
@@ -107,7 +165,7 @@ export default function Page() {
 
       <section id="contact" className="cta"><div><p className="eyebrow">Take the Next Step</p><h2>Ready to Build With MIEGA?</h2><p>Request a quote, start an investor conversation, or explore supplier partnership opportunities.</p></div><div className="ctaActions"><a className="button" href="mailto:info@miegaglobalsolutions.com"><Mail size={18} /> Request a Quote</a><a className="button ghost" href="https://www.instagram.com/miegaglobalsolutions" target="_blank">Instagram</a></div></section>
 
-      <footer><img src="/miega-logo.png" alt="MIEGA logo" /><strong>MIEGA Global Solutions LLC</strong><span>Global Procurement. Strategic Distribution. Scalable Growth.</span><small>Technology Procurement • Distribution • Supply Chain Solutions • Nashville • Los Angeles</small></footer>
+      <footer><img src="/miega-logo-transparent.png" alt="MIEGA logo" /><strong>MIEGA Global Solutions LLC</strong><span>Global Procurement. Strategic Distribution. Scalable Growth.</span><small>Technology Procurement • Distribution • Supply Chain Solutions • Nashville • Los Angeles</small></footer>
     </main>
   );
 }
