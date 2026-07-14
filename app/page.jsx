@@ -69,6 +69,20 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <section className="section ecosystemSection">
+        <p className="eyebrow center">Technology & Industrial Ecosystems</p>
+        <h2 className="centerTitle">Procurement Expertise Across Leading Global Manufacturers</h2>
+        <p className="centerSub">
+          These names identify target product ecosystems and sourcing categories. Display does not imply an authorized partnership, reseller appointment, or distributor relationship.
+        </p>
+        <div className="ecosystemGrid">
+          {['Cisco','Dell','HP','Lenovo','Intel','AMD','Microsoft','Honeywell','Siemens','Eaton','Schneider Electric','TD SYNNEX','Ingram Micro','Arrow'].map(item => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+      </section>
+
       <section className="section dark"><p className="eyebrow center">Why Choose MIEGA</p><h2 className="centerTitle">Built to Serve Commercial, Institutional, and Government Buyers</h2><div className="grid">{[[PackageCheck,'Technology Procurement','Product sourcing for technology, hardware, accessories, and business equipment.'],[Ship,'Global Sourcing','Supplier development across domestic and international manufacturing markets.'],[Warehouse,'Strategic Distribution','Fulfillment and logistics support for wholesale and commercial accounts.'],[ShieldCheck,'Quality Assurance','Supplier vetting and review processes designed to reduce procurement risk.'],[Handshake,'Supplier Relationships','Long-term supplier and customer relationships built around transparency and execution.'],[Factory,'American Business Commitment','A mission aligned with strengthening American businesses and resilient supply chains.']].map(([Icon,title,text]) => <div className="miniCard" key={title}><Icon /><h3>{title}</h3><p>{text}</p></div>)}</div></section>
 
       <section id="industries" className="section twoColumns"><div className="panel"><h2>Primary Product Categories</h2><div className="tags">{productCategories.map(item => <span key={item}>{item}</span>)}</div></div><div className="panel"><h2>Markets We Serve</h2><div className="tags">{markets.map(item => <span key={item}>{item}</span>)}</div></div></section>
@@ -89,7 +103,7 @@ export default function Page() {
 
       <section id="suppliers" className="section supplier"><p className="eyebrow center">Supplier Development</p><h2 className="centerTitle">Distribution & Supplier Strategy</h2><p className="centerSub">MIEGA is pursuing relationships with leading technology distributors and manufacturers. Formal authorizations will be displayed as secured.</p><div className="supplierGrid">{['Ingram Micro','TD SYNNEX','Arrow','Dell','HP','Lenovo','Cisco','Microsoft'].map(item => <span key={item}>{item}</span>)}</div></section>
 
-      <section id="locations" className="section twoColumns locations"><div className="panel locationCard"><MapPin /><h2>Nashville Headquarters</h2><p>611 Commerce Street, Suite 2611<br />Nashville, TN 37203</p><p><Phone size={16} /> (615) 709-7494<br />(888) 975-0804</p></div><div className="panel locationCard"><MapPin /><h2>Los Angeles Office</h2><p>10940 Wilshire Blvd, Suite 1600<br />Los Angeles, CA 90024</p><p><Phone size={16} /> (323) 880-8984</p></div></section>
+      <section id="locations" className="section twoColumns locations"><div className="panel locationCard"><MapPin /><h2>Nashville Headquarters</h2><p>611 Commerce Street, Suite 2611<br />Nashville, TN 37203</p><p><Phone size={16} /> (615) 709-7494<br />(888) 975-0804</p></div><div className="panel locationCard"><MapPin /><h2>Los Angeles Office</h2><p>10940 Wilshire Blvd, Suite 1600<br />Los Angeles, CA 90024</p><p><Phone size={16} /> (323) 800-8984</p></div></section>
 
       <section id="contact" className="cta"><div><p className="eyebrow">Take the Next Step</p><h2>Ready to Build With MIEGA?</h2><p>Request a quote, start an investor conversation, or explore supplier partnership opportunities.</p></div><div className="ctaActions"><a className="button" href="mailto:info@miegaglobalsolutions.com"><Mail size={18} /> Request a Quote</a><a className="button ghost" href="https://www.instagram.com/miegaglobalsolutions" target="_blank">Instagram</a></div></section>
 
