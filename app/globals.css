@@ -14,3 +14,56 @@
 .premiumFooter small{border-top:1px solid rgba(255,255,255,.12);padding-top:18px;color:#9fb2c5}
 @media(max-width:1200px){.ecosystemGrid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:650px){.ecosystemGrid{grid-template-columns:1fr}.footerBrand{align-items:flex-start}.footerLinks{grid-template-columns:1fr}}
+
+
+/* Atlas Enterprise 2026.1 refinements */
+.brand img,.footerBrand img,footer img{background:transparent!important;padding:0!important;object-fit:contain}
+.globe img,.logoHalo img{background:transparent!important;filter:drop-shadow(0 0 16px rgba(104,220,255,.5))}
+.logoHalo{background:radial-gradient(circle,rgba(72,180,255,.18),rgba(0,0,0,0) 70%);box-shadow:none}
+
+/* Display full source artwork instead of cropping it. */
+.featureCard{min-height:520px;background:#061a35}
+.featureCard img{object-fit:contain!important;object-position:center top;background:#061a35;transition:transform .45s ease}
+.featureCard:hover img{transform:scale(1.025)}
+.featureCard:after{background:linear-gradient(180deg,rgba(2,10,20,.02) 0%,rgba(2,10,20,.20) 48%,rgba(2,10,20,.95) 100%)}
+.featureCard div{background:linear-gradient(180deg,transparent,rgba(2,10,20,.90));left:0;right:0;bottom:0;padding:80px 26px 28px}
+
+/* Brighter connection routes and moving glow. */
+.route,.shippingLine{height:3px!important;background:linear-gradient(90deg,transparent,#55e9ff 18%,#7ff5c3 52%,#55e9ff 82%,transparent)!important;box-shadow:0 0 9px rgba(85,233,255,.95),0 0 20px rgba(127,245,195,.55)}
+.shippingPulse{width:13px;height:13px;background:#fff;box-shadow:0 0 8px #fff,0 0 22px #55e9ff,0 0 38px #7ff5c3}
+.continent,.routeHub{box-shadow:0 0 10px rgba(127,245,195,.75),0 0 28px rgba(85,233,255,.35)}
+.miniGlobe{animation:atlasMapPulse 5s ease-in-out infinite}
+@keyframes atlasMapPulse{0%,100%{box-shadow:inset -28px -24px 45px rgba(0,0,0,.5),0 0 28px rgba(38,199,255,.28)}50%{box-shadow:inset -28px -24px 45px rgba(0,0,0,.5),0 0 55px rgba(85,233,255,.55)}}
+
+.trustBanner div:first-child strong{color:#0b7a28}
+.governmentSection{background:linear-gradient(135deg,#061a35,#020a14);color:#fff}
+.governmentIntro{max-width:1100px;margin:0 auto 34px;text-align:center}
+.governmentIntro h2{font-size:clamp(34px,5vw,58px);line-height:1.05;margin:0 0 18px}
+.governmentIntro>p{max-width:880px;margin:0 auto;color:#dce9f4;font-size:18px}
+.governmentStatus{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:25px}
+.governmentStatus span{padding:12px 16px;border:1px solid rgba(127,245,195,.38);border-radius:999px;background:rgba(255,255,255,.07);color:#eaf8ff}
+.governmentStatus b{color:#7ff5c3;margin-right:5px}
+.governmentGrid{max-width:1260px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.governmentCard{padding:28px;border-radius:22px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06)}
+.governmentCard svg{color:#7ff5c3}
+.governmentCard h3{margin:14px 0 8px;font-size:22px}
+.governmentCard p{margin:0;color:#cddbe8}
+
+.capitalAllocation h3{margin:0 0 14px;color:#fff;font-size:22px}
+.milestonesSection{background:#fff}
+.milestoneGrid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.milestoneCard{padding:24px;border-radius:20px;border:1px solid #dfe9f2;box-shadow:0 10px 24px rgba(3,22,45,.07)}
+.milestoneCard span{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:900;font-size:12px;text-transform:uppercase}
+.milestoneCard.done span{background:#ddf7e6;color:#08752c}
+.milestoneCard.pending span{background:#fff2cf;color:#8c6100}
+.milestoneCard h3{margin:14px 0 0;color:#061a35;font-size:19px}
+
+@media(max-width:900px){
+  .governmentGrid{grid-template-columns:1fr 1fr}
+  .milestoneGrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  .featureCard{min-height:620px}
+  .featureCard img{object-position:center top}
+  .governmentGrid,.milestoneGrid{grid-template-columns:1fr}
+}
