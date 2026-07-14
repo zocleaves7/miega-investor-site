@@ -121,7 +121,58 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="investors" className="section investorSection"><p className="eyebrow center">Investor Relations</p><h2 className="centerTitle">Investment Highlights</h2><p className="centerSub">MIEGA is positioning itself as a scalable technology procurement and global supply chain company with multiple revenue channels.</p><div className="investGrid">{[['Scalable Business Model','Asset-light procurement and supplier-network strategy designed to expand without heavy early infrastructure.'],['Multiple Revenue Channels','Wholesale distribution, technology procurement, supplier sourcing, B2B sales, government procurement, and future private-label opportunities.'],['Large Addressable Markets','Commercial buyers, educational institutions, healthcare organizations, nonprofits, government agencies, and e-commerce customers.'],['Strategic Tennessee Launch','Starting from Tennessee with access to workforce development programs, business incentives, and scalable logistics pathways.']].map(([title,text]) => <div className="investCard" key={title}><BarChart3 /><h3>{title}</h3><p>{text}</p></div>)}</div><div className="capitalBox"><div><p className="eyebrow">Growth Capital Strategy</p><h2>Deploying Growth Capital for Scalable Expansion</h2><p>MIEGA is pursuing a disciplined mix of commercial lending, SBA programs, strategic investment, operating revenue, and future government-contract revenue to support scalable growth.</p></div><div className="capitalAllocation"><h3>Capital Allocation</h3><div className="funds">{funds.map(([pct,label]) => <div key={label}><strong>{pct}</strong><span>{label}</span></div>)}</div></div></section>
+      <section id="investors" className="section investorSection">
+        <p className="eyebrow center">Investor Relations</p>
+        <h2 className="centerTitle">Investment Highlights</h2>
+        <p className="centerSub">
+          MIEGA is positioning itself as a scalable technology procurement and global supply chain company with multiple revenue channels.
+        </p>
+
+        <div className="investGrid">
+          <div className="investCard">
+            <BarChart3 />
+            <h3>Scalable Business Model</h3>
+            <p>Asset-light procurement and supplier-network strategy designed to expand without heavy early infrastructure.</p>
+          </div>
+          <div className="investCard">
+            <BarChart3 />
+            <h3>Multiple Revenue Channels</h3>
+            <p>Wholesale distribution, technology procurement, supplier sourcing, B2B sales, government procurement, and future private-label opportunities.</p>
+          </div>
+          <div className="investCard">
+            <BarChart3 />
+            <h3>Large Addressable Markets</h3>
+            <p>Commercial buyers, educational institutions, healthcare organizations, nonprofits, government agencies, and e-commerce customers.</p>
+          </div>
+          <div className="investCard">
+            <BarChart3 />
+            <h3>Strategic Tennessee Launch</h3>
+            <p>Starting from Tennessee with access to workforce development programs, business incentives, and scalable logistics pathways.</p>
+          </div>
+        </div>
+
+        <div className="capitalBox">
+          <div>
+            <p className="eyebrow">Growth Capital Strategy</p>
+            <h2>Deploying Growth Capital for Scalable Expansion</h2>
+            <p>
+              MIEGA is pursuing a disciplined mix of commercial lending, SBA programs, strategic investment, operating revenue, and future government-contract revenue to support scalable growth.
+            </p>
+          </div>
+
+          <div className="capitalAllocation">
+            <h3>Capital Allocation</h3>
+            <div className="funds">
+              <div><strong>35%</strong><span>Inventory &amp; Product Acquisition</span></div>
+              <div><strong>20%</strong><span>Sales &amp; Marketing</span></div>
+              <div><strong>15%</strong><span>Technology Systems</span></div>
+              <div><strong>15%</strong><span>Personnel &amp; Workforce</span></div>
+              <div><strong>10%</strong><span>Operations</span></div>
+              <div><strong>5%</strong><span>Contingency</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="quote" className="section formsSection">
         <p className="eyebrow center">Business Intake</p>
