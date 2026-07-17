@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import { ArrowRight, BarChart3, Factory, Globe2, Handshake, LineChart, Mail, MapPin, PackageCheck, Phone, ShieldCheck, Ship, Truck, Warehouse } from 'lucide-react';
 
 const featureCards = [
@@ -21,11 +22,16 @@ const funds = [['35%','Inventory & Product Acquisition'],['20%','Sales & Marketi
 export default function Page() {
   return (
     <main>
+      <Script
+        id="trustedsite-main-code"
+        src="https://cdn.ywxi.net/js/1.js"
+        strategy="afterInteractive"
+      />
       <div className="topbar"><span>Technology Procurement • Distribution • Supply Chain Solutions</span><strong>Global Procurement. Strategic Distribution. Scalable Growth.</strong></div>
 
       <header className="nav">
         <a className="brand" href="#home"><img src="/miega-logo-transparent.png" alt="MIEGA Global Solutions logo" /><div><b>MIEGA</b><span>Global Solutions LLC</span></div></a>
-        <nav><a href="#story">About</a><a href="#solutions">Solutions</a><a href="#global-network">Global Network</a><a href="#industries">Industries</a><a href="#investors">Investors</a><a href="#quote">Quote</a><a href="#suppliers">Suppliers</a><a href="#contact">Contact</a></nav>
+        <nav><a href="#story">About</a><a href="#solutions">Solutions</a><a href="#global-network">Global Network</a><a href="#credentials">Credentials</a><a href="#industries">Industries</a><a href="#investors">Investors</a><a href="#quote">Quote</a><a href="#suppliers">Suppliers</a><a href="#contact">Contact</a></nav>
         <a className="button" href="#quote">Request a Quote</a>
       </header>
 
@@ -45,6 +51,111 @@ export default function Page() {
       </section>
 
       <section className="stats"><div><Globe2 /><strong>Global Reach</strong><span>Worldwide sourcing vision</span></div><div><PackageCheck /><strong>Strategic Procurement</strong><span>Business-focused buying</span></div><div><Truck /><strong>Reliable Distribution</strong><span>Logistics-ready growth</span></div><div><LineChart /><strong>Built for Growth</strong><span>Investor-ready strategy</span></div></section>
+
+      <section id="credentials" className="section credentialsSection">
+        <p className="eyebrow center">Trust & Compliance</p>
+        <h2 className="centerTitle">Credentials That Support Confident Procurement</h2>
+        <p className="centerSub">
+          MIEGA is building a verified, transparent operating foundation supported by government registration,
+          business-credit reporting, website trust verification, and responsible corporate disclosure.
+        </p>
+
+
+        <div className="trustScorecard">
+          <div><span>SAM.gov</span><strong>Active</strong></div>
+          <div><span>UEI</span><strong>Assigned</strong></div>
+          <div><span>CAGE</span><strong>Pending</strong></div>
+          <div><span>Dun &amp; Bradstreet</span><strong>Profile Established</strong></div>
+          <div><span>TrustedSite</span><strong>Integrated</strong></div>
+          <div><span>BBB</span><strong>Accreditation Pending</strong></div>
+        </div>
+
+        <div className="credentialsGrid">
+          <article className="credentialCard credentialPrimary">
+            <div className="credentialIcon"><ShieldCheck /></div>
+            <span className="credentialStatus active">Active</span>
+            <h3>SAM.gov Registration</h3>
+            <p>Registered in the System for Award Management and positioned to pursue federal procurement opportunities.</p>
+            <dl>
+              <div><dt>UEI</dt><dd>DAA6UFH72JG1</dd></div>
+              <div><dt>CAGE Code</dt><dd>Pending Assignment</dd></div>
+            </dl>
+          </article>
+
+
+          <article className="credentialCard">
+            <div className="credentialIcon"><BarChart3 /></div>
+            <span className="credentialStatus active">Profile Established</span>
+            <h3>Dun & Bradstreet Business Profile</h3>
+            <p>
+              MIEGA maintains an established Dun & Bradstreet business profile to support commercial
+              credibility, supplier review, lending discussions, and business credit development.
+            </p>
+            <dl className="credentialDetails">
+              <div><dt>D&amp;B Reference</dt><dd>D 1450011472M25</dd></div>
+              <div><dt>Status</dt><dd>Business Profile Established</dd></div>
+            </dl>
+          </article>
+
+          <article className="credentialCard">
+            <div className="credentialIcon"><ShieldCheck /></div>
+            <span className="credentialStatus integration">Integrated</span>
+            <h3>TrustedSite Trustmark</h3>
+            <p>
+              TrustedSite verification code is installed to support website trust, security visibility,
+              and visitor confidence.
+            </p>
+            <a href="https://www.trustedsite.com" target="_blank" rel="noreferrer">About TrustedSite</a>
+          </article>
+
+          <article className="credentialCard">
+            <div className="credentialIcon"><Handshake /></div>
+            <span className="credentialStatus pending">Pending Review</span>
+            <h3>Better Business Bureau Profile</h3>
+            <p>
+              MIEGA maintains a Better Business Bureau business profile. BBB accreditation is currently
+              pending review and is not represented as approved.
+            </p>
+          </article>
+
+          <article className="credentialCard">
+            <div className="credentialIcon"><Factory /></div>
+            <span className="credentialStatus active">Established</span>
+            <h3>Tennessee Registered LLC</h3>
+            <p>
+              MIEGA Global Solutions LLC operates from its Nashville headquarters with an additional
+              Los Angeles office supporting growth and market access.
+            </p>
+          </article>
+
+          <article className="credentialCard">
+            <div className="credentialIcon"><PackageCheck /></div>
+            <span className="credentialStatus capability">Capability</span>
+            <h3>Government Contracting Readiness</h3>
+            <p>
+              Procurement capabilities are being organized for federal, state, local, institutional,
+              and commercial purchasing requirements.
+            </p>
+          </article>
+
+          <article className="credentialCard">
+            <div className="credentialIcon"><Globe2 /></div>
+            <span className="credentialStatus capability">Capability</span>
+            <h3>Global Procurement & Distribution</h3>
+            <p>
+              Strategic sourcing, technology procurement, supplier development, and coordinated
+              distribution for domestic and international requirements.
+            </p>
+          </article>
+        </div>
+
+        <p className="credentialsNote">
+          Credential descriptions reflect MIEGA’s current status. Official seals are displayed only when
+          their issuing organizations authorize their use.
+        </p>
+      </section>
+
+
 
       <section id="story" className="section split"><div><p className="eyebrow">Our Story</p><h2>MIEGA stands for Making Import Export Great Again.</h2><p>MIEGA Global Solutions was founded on the belief that resilient supply chains, strong entrepreneurship, responsible global trade, and American economic growth create lasting opportunities for businesses and communities.</p><p>Our mission is to simplify procurement, strengthen supplier relationships, and connect trusted global manufacturers with customers seeking reliable technology products and strategic distribution solutions.</p></div><div className="valueCard"><h3>The MIEGA Difference</h3><ul><li>Support American businesses and entrepreneurs</li><li>Build resilient and responsible global supply chains</li><li>Deliver procurement integrity and reliability</li><li>Create scalable growth through strategic distribution</li></ul></div></section>
 
