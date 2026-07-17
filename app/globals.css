@@ -67,3 +67,170 @@
   .featureCard img{object-position:center top}
   .governmentGrid,.milestoneGrid{grid-template-columns:1fr}
 }
+
+
+/* Trust & Compliance — Atlas credentials release */
+.credentialsSection{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(20,177,114,.12),transparent 28%),
+    radial-gradient(circle at 88% 22%,rgba(15,117,205,.12),transparent 30%),
+    #f7fbff;
+}
+.credentialsGrid{
+  max-width:1240px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.credentialCard{
+  position:relative;
+  padding:28px;
+  border:1px solid #dce8f2;
+  border-radius:24px;
+  background:rgba(255,255,255,.94);
+  box-shadow:0 14px 34px rgba(3,22,45,.08);
+  overflow:hidden;
+}
+.credentialCard:before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:4px;
+  background:linear-gradient(90deg,#0b8d45,#1479ca);
+}
+.credentialPrimary{
+  background:linear-gradient(145deg,#061a35,#0b3158);
+  color:#fff;
+  border-color:rgba(255,255,255,.12);
+}
+.credentialPrimary p,.credentialPrimary dd{color:#d8e8f4}
+.credentialIcon{
+  width:50px;
+  height:50px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  color:#078c40;
+  background:#e5f8ec;
+  margin-bottom:18px;
+}
+.credentialPrimary .credentialIcon{
+  color:#7ff5c3;
+  background:rgba(127,245,195,.12);
+}
+.credentialCard h3{
+  margin:12px 0 10px;
+  color:#061a35;
+  font-size:23px;
+  line-height:1.2;
+}
+.credentialPrimary h3{color:#fff}
+.credentialCard p{
+  margin:0;
+  color:#596b7d;
+  line-height:1.65;
+}
+.credentialCard a{
+  display:inline-block;
+  margin-top:18px;
+  color:#086fbd;
+  font-weight:800;
+  text-decoration:none;
+}
+.credentialStatus{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.credentialStatus.active{background:#ddf7e6;color:#08752c}
+.credentialStatus.integration{background:#dcefff;color:#0869a8}
+.credentialStatus.pending{background:#fff0c9;color:#895b00}
+.credentialStatus.capability{background:#ede7ff;color:#6043a8}
+.credentialPrimary .credentialStatus.active{background:rgba(127,245,195,.15);color:#7ff5c3}
+.credentialCard dl{
+  margin:20px 0 0;
+  display:grid;
+  gap:10px;
+}
+.credentialCard dl div{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.14);
+}
+.credentialCard dt{font-weight:900;color:#7ff5c3}
+.credentialCard dd{margin:0;text-align:right}
+.credentialsNote{
+  max-width:1000px;
+  margin:26px auto 0;
+  text-align:center;
+  color:#68798a;
+  font-size:14px;
+}
+@media(max-width:950px){
+  .credentialsGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .credentialsGrid{grid-template-columns:1fr}
+  .credentialCard{padding:24px}
+}
+
+
+/* Dun & Bradstreet + executive trust scorecard */
+.trustScorecard{
+  max-width:1240px;
+  margin:0 auto 24px;
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:10px;
+}
+.trustScorecard div{
+  padding:16px 12px;
+  border-radius:16px;
+  background:#061a35;
+  border:1px solid rgba(127,245,195,.18);
+  text-align:center;
+  box-shadow:0 10px 24px rgba(3,22,45,.10);
+}
+.trustScorecard span{
+  display:block;
+  color:#a9c0d5;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.trustScorecard strong{
+  display:block;
+  margin-top:5px;
+  color:#7ff5c3;
+  font-size:14px;
+}
+.credentialDetails{
+  margin-top:18px!important;
+}
+.credentialDetails div{
+  border-top:1px solid #e1eaf2!important;
+}
+.credentialDetails dt{
+  color:#0b7a28!important;
+}
+.credentialDetails dd{
+  color:#31465a!important;
+  font-weight:800;
+  word-break:break-word;
+}
+@media(max-width:1100px){
+  .trustScorecard{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .trustScorecard{grid-template-columns:1fr 1fr}
+}
