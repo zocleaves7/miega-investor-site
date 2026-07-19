@@ -323,9 +323,106 @@ export default function Page() {
 
       <section id="suppliers" className="section supplier"><p className="eyebrow center">Supplier Development</p><h2 className="centerTitle">Distribution & Supplier Strategy</h2><p className="centerSub">MIEGA is pursuing relationships with leading technology distributors and manufacturers. Formal authorizations will be displayed as secured.</p><div className="supplierGrid">{['Ingram Micro','TD SYNNEX','Arrow','Dell','HP','Lenovo','Cisco','Microsoft'].map(item => <span key={item}>{item}</span>)}</div></section>
 
-      <section id="locations" className="section twoColumns locations"><div className="panel locationCard"><MapPin /><h2>Nashville Headquarters</h2><p>611 Commerce Street, Suite 2611<br />Nashville, TN 37203</p><p><Phone size={16} /> (615) 709-7494<br />(888) 975-0804</p></div><div className="panel locationCard"><MapPin /><h2>Los Angeles Office</h2><p>10940 Wilshire Blvd, Suite 1600<br />Los Angeles, CA 90024</p><p><Phone size={16} /> (323) 800-8984</p></div></section>
+      <section id="locations" className="section locationsSection">
+        <p className="eyebrow center">Contact Experience</p>
+        <h2 className="centerTitle">Connect With MIEGA</h2>
+        <p className="centerSub">
+          Tap a phone number to call, open an office address for directions, or send a procurement inquiry by email.
+        </p>
 
-      <section id="contact" className="cta"><div><p className="eyebrow">Take the Next Step</p><h2>Ready to Build With MIEGA?</h2><p>Request a quote, start an investor conversation, or explore supplier partnership opportunities.</p></div><div className="ctaActions"><a className="button" href="mailto:info@miegaglobalsolutions.com"><Mail size={18} /> Request a Quote</a><a className="button ghost" href="https://www.instagram.com/miegaglobalsolutions" target="_blank">Instagram</a></div></section>
+        <div className="contactQuickActions">
+          <a href="tel:+18889750804"><Phone size={18} /> Toll-Free</a>
+          <a href="mailto:info@miegaglobalsolutions.com"><Mail size={18} /> Email MIEGA</a>
+          <a href="https://www.miegaglobal1.com" target="_blank" rel="noreferrer"><Globe2 size={18} /> Visit Website</a>
+          <a href="#quote"><ArrowRight size={18} /> Request a Quote</a>
+        </div>
+
+        <div className="locationsGrid">
+          <article className="panel locationCard">
+            <MapPin />
+            <h2>Nashville Headquarters</h2>
+            <a
+              className="locationAddress"
+              href="https://www.google.com/maps/search/?api=1&query=611+Commerce+Street+Suite+2611+Nashville+TN+37203"
+              target="_blank"
+              rel="noreferrer"
+            >
+              611 Commerce Street, Suite 2611<br />
+              Nashville, TN 37203
+            </a>
+
+            <div className="locationPhones">
+              <a href="tel:+16157097494"><Phone size={17} /> (615) 709-7494</a>
+              <a href="tel:+18889750804"><Phone size={17} /> (888) 975-0804</a>
+            </div>
+
+            <div className="locationActions">
+              <a href="tel:+16157097494"><Phone size={17} /> Call Nashville</a>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=611+Commerce+Street+Suite+2611+Nashville+TN+37203"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MapPin size={17} /> Directions
+              </a>
+              <a href="mailto:info@miegaglobalsolutions.com?subject=MIEGA%20Nashville%20Office%20Inquiry">
+                <Mail size={17} /> Email
+              </a>
+            </div>
+          </article>
+
+          <article className="panel locationCard">
+            <MapPin />
+            <h2>Los Angeles Office</h2>
+            <a
+              className="locationAddress"
+              href="https://www.google.com/maps/search/?api=1&query=10940+Wilshire+Blvd+Suite+1600+Los+Angeles+CA+90024"
+              target="_blank"
+              rel="noreferrer"
+            >
+              10940 Wilshire Blvd, Suite 1600<br />
+              Los Angeles, CA 90024
+            </a>
+
+            <div className="locationPhones">
+              <a href="tel:+13238008984"><Phone size={17} /> (323) 800-8984</a>
+            </div>
+
+            <div className="locationActions">
+              <a href="tel:+13238008984"><Phone size={17} /> Call Los Angeles</a>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=10940+Wilshire+Blvd+Suite+1600+Los+Angeles+CA+90024"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MapPin size={17} /> Directions
+              </a>
+              <a href="mailto:info@miegaglobalsolutions.com?subject=MIEGA%20Los%20Angeles%20Office%20Inquiry">
+                <Mail size={17} /> Email
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div className="contactResponseBanner">
+          <strong>Need pricing or sourcing assistance?</strong>
+          <span>Send MIEGA your product requirements, quantity, destination, and delivery timeline to begin a procurement review.</span>
+          <a href="mailto:info@miegaglobalsolutions.com?subject=MIEGA%20Procurement%20Request">Start an Inquiry <ArrowRight size={17} /></a>
+        </div>
+      </section>
+
+      <section id="contact" className="cta">
+        <div>
+          <p className="eyebrow">Take the Next Step</p>
+          <h2>Ready to Build With MIEGA?</h2>
+          <p>Request a quote, call the toll-free line, or begin a supplier or investor conversation.</p>
+        </div>
+        <div className="ctaActions">
+          <a className="button" href="mailto:info@miegaglobalsolutions.com?subject=MIEGA%20Quote%20Request"><Mail size={18} /> Request a Quote</a>
+          <a className="button ghost" href="tel:+18889750804"><Phone size={18} /> Call Toll-Free</a>
+          <a className="button ghost" href="https://www.instagram.com/miegaglobalsolutions" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </section>
 
       <footer><img src="/miega-logo-transparent.png" alt="MIEGA logo" /><strong>MIEGA Global Solutions LLC</strong><span>Global Procurement. Strategic Distribution. Scalable Growth.</span><small>Technology Procurement • Distribution • Supply Chain Solutions • Nashville • Los Angeles</small></footer>
     </main>
