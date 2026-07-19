@@ -234,3 +234,151 @@
 @media(max-width:650px){
   .trustScorecard{grid-template-columns:1fr 1fr}
 }
+
+
+/* Contact Experience 2.0 */
+.locationsSection{
+  background:
+    radial-gradient(circle at 12% 8%,rgba(20,177,114,.10),transparent 28%),
+    radial-gradient(circle at 88% 18%,rgba(15,117,205,.10),transparent 30%),
+    #f7fbff;
+}
+.contactQuickActions{
+  max-width:1100px;
+  margin:28px auto 30px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+.contactQuickActions a{
+  min-height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 14px;
+  border-radius:16px;
+  background:#061a35;
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  box-shadow:0 10px 24px rgba(3,22,45,.10);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.contactQuickActions a:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(3,22,45,.15);
+}
+.locationsGrid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+}
+.locationCard{
+  padding:34px!important;
+  border-radius:28px!important;
+  border:1px solid #dce8f2!important;
+  box-shadow:0 16px 38px rgba(3,22,45,.08)!important;
+}
+.locationCard>svg{
+  color:#078c40;
+  width:34px;
+  height:34px;
+}
+.locationCard h2{
+  margin:18px 0 16px;
+}
+.locationAddress{
+  display:block;
+  color:#53677a;
+  text-decoration:none;
+  font-size:19px;
+  line-height:1.55;
+}
+.locationAddress:hover{
+  color:#086fbd;
+}
+.locationPhones{
+  display:grid;
+  gap:10px;
+  margin-top:24px;
+}
+.locationPhones a{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#31465a;
+  text-decoration:none;
+  font-size:19px;
+  font-weight:800;
+}
+.locationPhones a svg{
+  color:#078c40;
+}
+.locationActions{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:28px;
+}
+.locationActions a{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:#eaf5ff;
+  color:#075f9f;
+  border:1px solid #d6e8f5;
+  text-decoration:none;
+  text-align:center;
+  font-size:13px;
+  font-weight:900;
+}
+.locationActions a:first-child{
+  background:linear-gradient(135deg,#0b8d45,#1479ca);
+  color:#fff;
+  border-color:transparent;
+}
+.contactResponseBanner{
+  max-width:1200px;
+  margin:24px auto 0;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:18px;
+  padding:22px 24px;
+  border-radius:20px;
+  background:#061a35;
+  color:#fff;
+}
+.contactResponseBanner strong{
+  color:#7ff5c3;
+}
+.contactResponseBanner span{
+  color:#d7e5f0;
+}
+.contactResponseBanner a{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  white-space:nowrap;
+}
+@media(max-width:900px){
+  .contactQuickActions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .locationsGrid{grid-template-columns:1fr}
+  .contactResponseBanner{grid-template-columns:1fr;text-align:center}
+  .contactResponseBanner a{justify-content:center}
+}
+@media(max-width:560px){
+  .contactQuickActions{grid-template-columns:1fr 1fr}
+  .locationCard{padding:26px!important}
+  .locationActions{grid-template-columns:1fr}
+}
